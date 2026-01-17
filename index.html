@@ -1,0 +1,383 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Komunitas Laravel Indonesia Discord - Belajar, Diskusi & Lowongan Kerja</title>
+    <meta name="description"
+        content="Gabung bersama komunitas Laravel Indonesia di Discord. Tempat terbaik bagi developer PHP & Laravel untuk diskusi coding, debugging, berbagi resources, dan mencari lowongan kerja." />
+    <meta name="keywords"
+        content="Laravel Indonesia, Komunitas Laravel, Belajar PHP Indonesia, Lowongan Kerja Laravel, Laravel Discord Indonesia, Web Development Indonesia, Developer PHP Indonesia" />
+    <meta name="author" content="Lara Army - Laravel Indonesia Community" />
+    <link rel="canonical" href="https://lara-army.github.io/laravel-indonesia-web/" />
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="manifest" href="/site.webmanifest">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website" />
+    <meta property="og:url" content="https://lara-army.github.io/laravel-indonesia-web/" />
+    <meta property="og:title" content="Komunitas Laravel Indonesia Discord - Belajar & Berkembang Bersama" />
+    <meta property="og:description"
+        content="Tempat kumpul developer Laravel di Indonesia. Diskusi coding, bagikan project, dan temukan peluang karir terbaru." />
+    <meta property="og:image" content="https://lara-army.github.io/laravel-indonesia-web/og-image.png" />
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image" />
+    <meta property="twitter:url" content="https://lara-army.github.io/laravel-indonesia-web/" />
+    <meta property="twitter:title" content="Komunitas Laravel Indonesia Discord" />
+    <meta property="twitter:description"
+        content="Gabung komunitas Laravel terbesar di Indonesia. Belajar, berbagi, dan tumbuh bersama ribuan developer lainnya." />
+    <meta property="twitter:image" content="https://lara-army.github.io/laravel-indonesia-web/og-image.png" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Laravel Indonesia",
+      "url": "https://lara-army.github.io/laravel-indonesia-web/",
+      "potentialAction": {
+        "@type": "SearchAction",
+        "target": "{search_term_string}",
+        "query-input": "required name=search_term_string"
+      }
+    }
+    </script>
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "Laravel Indonesia Community",
+      "url": "https://lara-army.github.io/laravel-indonesia-web/",
+      "logo": "https://lara-army.github.io/laravel-indonesia-web/logo.svg",
+      "sameAs": [
+        "https://discord.gg/TzvhwgZuVt"
+      ]
+    }
+    </script>
+
+    <style>
+        :root {
+            --bg: #020617;
+            --fg: #e5e7eb;
+            --muted: #94a3b8;
+            --accent: #f97316;
+            --card: rgba(15, 23, 42, 0.85);
+            --border: rgba(255, 255, 255, 0.08);
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: system-ui, -apple-system, Segoe UI, Roboto, Ubuntu, Cantarell, "Helvetica Neue", Arial, sans-serif;
+            background: var(--bg);
+            color: var(--fg);
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        a {
+            color: var(--accent);
+            text-decoration: none;
+            font-weight: 600;
+        }
+
+        header {
+            padding: 5rem 1.5rem 4rem;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .hero-bg {
+            position: absolute;
+            inset: 0;
+            background:
+                radial-gradient(circle at 20% 20%, rgba(255, 255, 255, 0.06), transparent 40%),
+                radial-gradient(circle at 80% 30%, rgba(255, 255, 255, 0.04), transparent 45%),
+                radial-gradient(circle at 50% 80%, rgba(255, 255, 255, 0.03), transparent 40%);
+            animation: floatBg 18s ease-in-out infinite alternate;
+            z-index: 0;
+        }
+
+        @keyframes floatBg {
+            from {
+                transform: translateY(0);
+            }
+
+            to {
+                transform: translateY(-40px);
+            }
+        }
+
+        header>* {
+            position: relative;
+            z-index: 1;
+        }
+
+        .logo {
+            width: 200px;
+            height: 200px;
+            margin: 0 auto 1rem;
+            animation: spinIn 1s ease-out both;
+        }
+
+        @keyframes spinIn {
+            from {
+                opacity: 0;
+                transform: rotate(-90deg) scale(0.8);
+            }
+
+            to {
+                opacity: 1;
+                transform: rotate(0deg) scale(1);
+            }
+        }
+
+        header h1 {
+            font-size: clamp(2rem, 4vw, 3rem);
+            margin-bottom: 0.5rem;
+            letter-spacing: -0.02em;
+            animation: fadeUp 0.8s ease-out both;
+        }
+
+        header p {
+            max-width: 760px;
+            margin: 0 auto 1.75rem;
+            color: var(--muted);
+            animation: fadeUp 1s ease-out both;
+        }
+
+        .cta {
+            display: inline-flex;
+            align-items: center;
+            gap: 0.75rem;
+            padding: 0.85rem 1.75rem;
+            border-radius: 999px;
+            background: var(--accent);
+            color: #020617;
+            box-shadow: 0 10px 25px rgba(249, 115, 22, 0.35);
+            animation: fadeUp 1.2s ease-out both;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .cta:hover {
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 12px 30px rgba(249, 115, 22, 0.45);
+        }
+
+        .cta svg {
+            transition: transform 0.3s cubic-bezier(0.34, 1.56, 0.64, 1);
+        }
+
+        .cta:hover svg {
+            transform: rotate(12deg) scale(1.1);
+        }
+
+        @keyframes fadeUp {
+            from {
+                opacity: 0;
+                transform: translateY(16px);
+            }
+
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
+        section {
+            max-width: 1040px;
+            margin: 0 auto;
+            padding: 3.5rem 1.5rem;
+        }
+
+        .grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+            gap: 1.75rem;
+        }
+
+        .card {
+            background: var(--card);
+            border: 1px solid var(--border);
+            border-radius: 1.25rem;
+            padding: 1.75rem;
+            transition: transform 0.25s ease, box-shadow 0.25s ease;
+        }
+
+        .card:hover {
+            transform: translateY(-6px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+        }
+
+        .card h3 {
+            margin-top: 0;
+        }
+
+        footer {
+            padding: 2.5rem 1.5rem;
+            text-align: center;
+            color: var(--muted);
+            border-top: 1px solid rgba(255, 255, 255, 0.08);
+        }
+
+        .lang {
+            margin-top: 2rem;
+            font-size: 0.9rem;
+            color: var(--muted);
+        }
+
+        .divider {
+            height: 1px;
+            background: linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.2), transparent);
+            margin: 2rem 0;
+        }
+
+        #footer-logo {
+            white-space: nowrap;
+            margin-top: 96px;
+            font-size: 26vw;
+            line-height: 0.9;
+            text-align: center;
+            font-weight: 400;
+            letter-spacing: -0.05em;
+            user-select: none;
+            pointer-events: none;
+            display: flex;
+            justify-content: center;
+            overflow: hidden;
+        }
+    </style>
+</head>
+
+<body>
+
+    <header>
+        <div class="hero-bg"></div>
+
+        <img class="logo" src="/logo.svg" alt="Laravel Indonesia Official Logo" width="200" height="200">
+
+        <h1>Laravel Indonesia Discord Community</h1>
+        <p>
+            Wadah kolaborasi developer Laravel di Indonesia. Tempat diskusi coding,
+            solusi error, berbagi resource, hingga info lowongan kerja terbaru.
+        </p>
+        <a id="cta-header-join" class="cta" href="https://discord.gg/TzvhwgZuVt" target="_blank" rel="noopener">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path
+                    d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1278 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.419-2.1569 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+            </svg>
+            <span>Gabung ke Discord Sekarang</span>
+        </a>
+
+        <div class="lang">Global Community · Bahasa Indonesia & English</div>
+    </header>
+
+    <main id="main-content">
+
+        <section>
+            <div class="grid">
+                <div class="card">
+                    <h3>💻 Coding & Debugging</h3>
+                    <p>
+                        Ask questions, debug errors, and discuss Laravel-related coding topics with developers of all
+                        levels.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>📦 Resources</h3>
+                    <p>
+                        Share articles, tools, libraries, examples, and useful resources for Laravel development.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💼 Jobs & Opportunities</h3>
+                    <p>
+                        Job postings, freelance work, collaborations, and personal job-seeking posts in one place.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>� Community & Events</h3>
+                    <p>
+                        Participate in discussions, community calls, and stay updated with the latest Laravel news in
+                        Indonesia.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section>
+            <h2 style="text-align: center; margin-bottom: 2.5rem;">Why this Discord is different</h2>
+            <div class="grid">
+                <div class="card">
+                    <h3>🚀 Skip the Tutorial Hell</h3>
+                    <p>
+                        Tired of generic guides? Get answers to complex, real-world problems from developers who have
+                        already solved them in production.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>🛡️ Battle-Tested Advice</h3>
+                    <p>
+                        Don't just write code; build architectures that scale. Discuss patterns, security, and
+                        performance
+                        with senior Laravel practitioners.
+                    </p>
+                </div>
+
+                <div class="card">
+                    <h3>💎 High-Signal Networking</h3>
+                    <p>
+                        Build your reputation where it matters. Connect with technical leads, founders, and the top 1%
+                        of
+                        the Indonesian Laravel ecosystem.
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <section id="about-section">
+            <h2>Untuk Developer Indonesia</h2>
+            <p>
+                Laravel Indonesia Discord adalah ruang inklusif untuk belajar, bertanya, dan berkembang bersama.
+            </p>
+        </section>
+
+        <section id="footer-cta" style="text-align: center;">
+            <a id="cta-mid-join" class="cta" href="https://discord.gg/TzvhwgZuVt" target="_blank" rel="noopener">
+                <svg width="24" height="24" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <path
+                        d="M20.317 4.3698a19.7913 19.7913 0 00-4.8851-1.5152.0741.0741 0 00-.0785.0371c-.211.3753-.4447.8648-.6083 1.2495-1.8447-.2762-3.68-.2762-5.4868 0-.1636-.3933-.4058-.8742-.6177-1.2495a.077.077 0 00-.0785-.037 19.7363 19.7363 0 00-4.8852 1.515.0699.0699 0 00-.0321.0277C.5334 9.0458-.319 13.5799.0992 18.0578a.0824.0824 0 00.0312.0561c2.0528 1.5076 4.0413 2.4228 5.9929 3.0294a.0777.0777 0 00.0842-.0276c.4616-.6304.8731-1.2952 1.226-1.9942a.076.076 0 00-.0416-.1057c-.6528-.2476-1.2743-.5495-1.8722-.8923a.077.077 0 01-.0076-.1277c.1258-.0943.2517-.1923.3718-.2914a.0743.0743 0 01.0776-.0105c3.9278 1.7933 8.18 1.7933 12.0614 0a.0739.0739 0 01.0785.0095c.1202.099.246.1971.3728.2914a.077.077 0 01-.0066.1278 12.2986 12.2986 0 01-1.873.8914.0766.0766 0 00-.0407.1067c.3604.698.7719 1.3628 1.225 1.9932a.076.076 0 00.0842.0286c1.961-.6067 3.9495-1.5219 6.0023-3.0294a.077.077 0 00.0313-.0552c.5004-5.177-.8382-9.6739-3.5485-13.6604a.061.061 0 00-.0312-.0286zM8.02 15.3312c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9555-2.4189 2.157-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.9555 2.419-2.1569 2.419zm7.9748 0c-1.1825 0-2.1569-1.0857-2.1569-2.419 0-1.3332.9554-2.4189 2.1569-2.4189 1.2108 0 2.1757 1.0952 2.1568 2.419 0 1.3332-.946 2.419-2.1568 2.419z" />
+                </svg>
+                <span>Join the Discord Server</span>
+            </a>
+        </section>
+    </main>
+
+    <footer>
+        <p>
+            Bismillah Laracon Indonesia 2027 · Lara Army · Laravel Indonesia Community
+        </p>
+    </footer>
+
+    <div id="footer-logo">
+        Laravel🇮🇩
+    </div>
+
+</body>
+
+</html>
