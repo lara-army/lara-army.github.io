@@ -101,7 +101,7 @@ import IconArrowUpRight from "~icons/tabler/arrow-up-right";
       </div>
     </div>
     <div
-      class="inner relative min-h-screen border-x border-dashed border-zinc-800 flex gap-12 flex-col items-center justify-center"
+      class="inner relative min-h-screen border-x border-dashed border-zinc-800 flex flex-col items-center justify-center"
     >
       <div
         class="absolute left-0 -translate-x-full border-l border-dashed border-zinc-800 top-0 bottom-0 w-16"
@@ -121,11 +121,11 @@ import IconArrowUpRight from "~icons/tabler/arrow-up-right";
                 y2="0"
                 stroke="currentColor"
                 vector-effect="non-scaling-stroke"
-                class="[stroke:hsl(0,0%,0%)] dark:[stroke:hsl(0,0%,30%)]"
+                class="stroke-[hsl(0,0%,0%)] dark:stroke-[hsl(0,0%,30%)]"
               ></line></pattern
             ></defs
-          ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect></svg
-        >
+          ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect>
+        </svg>
       </div>
       <div
         class="absolute right-0 translate-x-full border-r border-dashed border-zinc-800 top-0 bottom-0 w-16"
@@ -145,13 +145,13 @@ import IconArrowUpRight from "~icons/tabler/arrow-up-right";
                 y2="0"
                 stroke="currentColor"
                 vector-effect="non-scaling-stroke"
-                class="[stroke:hsl(0,0%,0%)] dark:[stroke:hsl(0,0%,30%)]"
+                class="stroke-[hsl(0,0%,0%)] dark:stroke-[hsl(0,0%,30%)]"
               ></line></pattern
             ></defs
           ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect></svg
         >
       </div>
-      <div class="relative flex flex-col -space-y-[18rem]">
+      <div class="relative flex flex-col -space-y-72 translate-y-2">
         <span
           class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
           style="-webkit-text-stroke:1px var(--color-zinc-500);"
@@ -186,27 +186,74 @@ import IconArrowUpRight from "~icons/tabler/arrow-up-right";
           LARAVEL INDONESIA
         </h1>
       </div>
-      <button
-        class="text-laravel border-laravel/30 bg-linear-to-b from-transparent to-laravel/6 after:content-[''] after:absolute after:inset-0 after:-z-1 transition-all hover:after:bg-laravel after:transition-all hover:text-white h-12 px-6 border relative group hover:-rotate-6"
-      >
+      <div class="w-full flex flex-col">
+        <div class="border-zinc-900 border-t h-4"></div>
         <div
-          class="absolute border-l border-t h-[30%] aspect-square transition-all -left-px -top-px group-hover:-left-1 group-hover:-top-1 border-laravel"
+          class="flex justify-between group border-y border-zinc-900 items-center"
         >
+          <div
+            class="flex justify-center border-r border-zinc-900 items-center h-16 w-40 shrink-0"
+          >
+            <span class="text-lg font-bold">50+ Anggota</span>
+          </div>
+          <div class="w-full relative h-16 flex items-center">
+            <div
+              class="w-full h-px bg-zinc-800 group-has-[button:hover]:bg-laravel"
+            >
+            </div>
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-130 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-130 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-140 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-140 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-150 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+            <div
+              class="w-px h-[70%] bg-zinc-800 right-150 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
+            >
+            </div>
+          </div>
+          <div class="px-2 shrink-0">
+            <button
+              class="text-laravel border-laravel/30 bg-linear-to-b from-transparent to-laravel/6 after:content-[''] after:absolute after:inset-0 after:-z-1 transition-all hover:after:bg-laravel after:transition-all hover:text-white h-12 px-6 border relative group/button"
+            >
+              <div
+                class="absolute border-l border-t h-[30%] aspect-square transition-all -left-px -top-px group-hover/button:-left-1 group-hover/button:-top-1 border-laravel"
+              >
+              </div>
+              <div
+                class="absolute border-r border-t h-[30%] aspect-square transition-all -right-px -top-px group-hover/button:-right-1 group-hover/button:-top-1 border-laravel"
+              >
+              </div>
+              <div
+                class="absolute border-l border-b h-[30%] aspect-square transition-all -left-px -bottom-px group-hover/button:-left-1 group-hover/button:-bottom-1 border-laravel"
+              >
+              </div>
+              <div
+                class="absolute border-r border-b h-[30%] aspect-square transition-all -right-px -bottom-px group-hover/button:-right-1 group-hover/button:-bottom-1 border-laravel"
+              >
+              </div>
+              Gabung Discord
+            </button>
+          </div>
         </div>
-        <div
-          class="absolute border-r border-t h-[30%] aspect-square transition-all -right-px -top-px group-hover:-right-1 group-hover:-top-1 border-laravel"
-        >
-        </div>
-        <div
-          class="absolute border-l border-b h-[30%] aspect-square transition-all -left-px -bottom-px group-hover:-left-1 group-hover:-bottom-1 border-laravel"
-        >
-        </div>
-        <div
-          class="absolute border-r border-b h-[30%] aspect-square transition-all -right-px -bottom-px group-hover:-right-1 group-hover:-bottom-1 border-laravel"
-        >
-        </div>
-        Join Discord
-      </button>
+        <div class="border-zinc-900 border-b h-4"></div>
+      </div>
     </div>
     <div class="absolute z-10 right-0 top-0 bottom-0 w-16 overflow-hidden">
       <div class="scroll-down flex flex-col -space-y-px">
