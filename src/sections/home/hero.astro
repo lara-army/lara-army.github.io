@@ -1,6 +1,6 @@
-<script lang="ts">
-  import PatternBlocks from './pattern-blocks.svelte';
-</script>
+---
+import PatternBlocks from './pattern-blocks.astro';
+---
 
 <main class="flex items-center justify-center relative overflow-x-hidden">
   <aside class="absolute z-10 left-0 top-0 lg:bottom-0 lg:right-auto right-0 lg:w-16 lg:h-auto w-auto h-16 overflow-hidden">
@@ -64,14 +64,14 @@
     </div>
     
     <div class="relative w-full flex flex-col mb-0.75 md:mb-0 xl:-space-y-72 lg:-space-y-60 md:-space-y-42 sm:-space-y-36 -space-y-24 translate-y-2">
-      {#each Array(5) as _}
+      {Array.from({ length: 5 }).map(() => (
         <span
           class="font-black xl:text-[12rem] lg:text-[10rem] md:text-[7rem] sm:text-[6rem] text-[4rem] select-none leading-[0.8] text-center text-white"
           style="-webkit-text-stroke:1px var(--color-zinc-500);"
         >
           <span data-fitty>LARAVEL</span> <span data-fitty>INDONESIA</span>
         </span>
-      {/each}
+      ))}
 
       <h1
         class="font-black xl:text-[12rem] lg:text-[10rem] md:text-[7rem] sm:text-[6rem] text-[4rem] leading-[0.8] text-center"

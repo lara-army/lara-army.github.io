@@ -3,11 +3,11 @@ import Layout from "../layouts/app.astro";
 import IconArrowUpRight from "~icons/tabler/arrow-up-right";
 import IconBrandGithub from "~icons/tabler/brand-github";
 import IconBrandX from "~icons/tabler/brand-x";
-import HeroSection from "../sections/home/hero.svelte";
+import HeroSection from "../sections/home/hero.astro";
 ---
 
 <Layout>
-  <HeroSection client:load />
+  <HeroSection />
   <section class="border-y flex border-border-dark relative">
     <div class="border-b border-border-dark h-16">
       <svg width="100%" height="100%" aria-hidden="true"
