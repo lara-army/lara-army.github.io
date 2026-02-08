@@ -3,258 +3,11 @@ import Layout from "../layouts/app.astro";
 import IconArrowUpRight from "~icons/tabler/arrow-up-right";
 import IconBrandGithub from "~icons/tabler/brand-github";
 import IconBrandX from "~icons/tabler/brand-x";
+import HeroSection from "../components/hero/hero-section.svelte";
 ---
 
-<script>
-  import fitty from "fitty";
-
-  fitty("#laravel-text");
-</script>
-
 <Layout>
-  <main class="flex items-center justify-center relative">
-    <div class="absolute z-10 left-0 top-0 bottom-0 w-16 overflow-hidden">
-      <div class="scroll-up flex-col -space-y-px md:flex hidden">
-        {
-          Array.from({ length: 20 }).map(() => (
-            <>
-              <div class="size-16 border border-border-dark shrink-0">
-                <div class="w-full h-1/2 border-b border-border-dark bg-indonesia-red" />
-                <div class="w-full h-1/2 bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/2 h-full border-r border-border-dark bg-indonesia-red" />
-                <div class="w-1/2 h-full bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0">
-                <div class="w-full h-1/2 border-b border-border-dark bg-background" />
-                <div class="w-full h-1/2 bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/2 h-full border-r border-border-dark bg-background" />
-                <div class="w-1/2 h-full bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 grid grid-cols-2 grid-rows-2">
-                <div class="border-r border-b border-border-dark bg-indonesia-red" />
-                <div class=" bg-background" />
-                <div class="bg-background" />
-                <div class="border-l border-t border-border-dark bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 grid grid-cols-2 grid-rows-2">
-                <div class="border-r border-b border-border-dark bg-background" />
-                <div class="bg-indonesia-red" />
-                <div class="bg-indonesia-red" />
-                <div class="border-l border-t border-border-dark bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex flex-col">
-                <div class="h-1/3 w-full bg-indonesia-red" />
-                <div class="h-1/3 w-full bg-background border-x border-border-dark" />
-                <div class="h-1/3 w-full bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/3 h-full bg-background" />
-                <div class="w-1/3 h-full bg-indonesia-red border-x border-border-dark" />
-                <div class="w-1/3 h-full bg-background" />
-              </div>
-            </>
-          ))
-        }
-      </div>
-    </div>
-    <div
-      class="inner relative min-h-screen border-x border-dashed border-border-dark flex flex-col items-center justify-center"
-    >
-      <div
-        class="absolute left-0 -translate-x-full border-l border-dashed border-border-dark top-0 bottom-0 w-16"
-      >
-        <svg width="100%" height="100%" aria-hidden="true"
-          ><defs
-            ><pattern
-              viewBox="0 0 10 10"
-              width="8"
-              height="8"
-              patternUnits="userSpaceOnUse"
-              id="_r9R_g_"
-              ><line
-                x1="0"
-                y1="10"
-                x2="10"
-                y2="0"
-                stroke="currentColor"
-                vector-effect="non-scaling-stroke"
-                class="stroke-[hsl(0,0%,0%)] dark:stroke-[hsl(0,0%,30%)]"
-              ></line></pattern
-            ></defs
-          ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect>
-        </svg>
-      </div>
-      <div
-        class="absolute right-0 translate-x-full border-r border-dashed border-border-dark top-0 bottom-0 w-16"
-      >
-        <svg width="100%" height="100%" aria-hidden="true"
-          ><defs
-            ><pattern
-              viewBox="0 0 10 10"
-              width="8"
-              height="8"
-              patternUnits="userSpaceOnUse"
-              id="_r9R_g_"
-              ><line
-                x1="0"
-                y1="10"
-                x2="10"
-                y2="0"
-                stroke="currentColor"
-                vector-effect="non-scaling-stroke"
-                class="stroke-[hsl(0,0%,0%)] dark:stroke-[hsl(0,0%,30%)]"
-              ></line></pattern
-            ></defs
-          ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect></svg
-        >
-      </div>
-      <div
-        class="relative flex flex-col xl:-space-y-72 lg:-space-y-66 md:-space-y-48 translate-y-2"
-      >
-        {
-          Array.from({ length: 5 }).map(() => (
-            <span
-              class="font-black xl:text-[12rem] lg:text-[11rem] md:text-[8rem] text-[6rem] select-none leading-[0.8] text-center text-white"
-              style="-webkit-text-stroke:1px var(--color-zinc-500);"
-            >
-              LARAVEL INDONESIA
-            </span>
-          ))
-        }
-        <h1
-          data-laravel-indonesia
-          class="font-black xl:text-[12rem] lg:text-[11rem] md:text-[8rem] text-[6rem] leading-[0.8] text-center"
-        >
-          LARAVEL INDONESIA
-        </h1>
-      </div>
-      <div class="w-full flex flex-col">
-        <div class="border-zinc-900 border-t h-4"></div>
-        <div
-          class="flex justify-between group border-y border-zinc-900 items-center"
-        >
-          <div
-            class="flex justify-center border-r border-zinc-900 items-center h-16 w-40 shrink-0"
-          >
-            <span class="text-lg font-bold text-foreground-heading">
-              50+ Anggota
-            </span>
-          </div>
-          <div class="w-full relative h-16 flex items-center">
-            <div
-              class="w-full h-px bg-zinc-800 group-has-[button:hover]:bg-laravel"
-            >
-            </div>
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-130 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-130 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-140 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-140 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-150 -bottom-1.5 absolute rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-            <div
-              class="w-px h-[70%] bg-zinc-800 right-150 -top-1.5 absolute -rotate-45 group-has-[button:hover]:bg-laravel group-has-[button:hover]:right-4 transition-all"
-            >
-            </div>
-          </div>
-          <div class="px-2 shrink-0">
-            <a
-              href="https://discord.gg/VjUnPtZ8DP"
-              target="_blank"
-              rel="noopener noreferrer"
-              class="text-laravel border-laravel/30 bg-linear-to-b from-transparent to-laravel/6 after:content-[''] after:absolute after:inset-0 after:-z-1 transition-all hover:after:bg-laravel after:transition-all hover:text-white h-12 px-6 border relative group/button inline-flex items-center justify-center"
-            >
-              <div
-                class="absolute border-l border-t h-[30%] aspect-square transition-all -left-px -top-px group-hover/button:-left-1 group-hover/button:-top-1 border-laravel"
-              >
-              </div>
-              <div
-                class="absolute border-r border-t h-[30%] aspect-square transition-all -right-px -top-px group-hover/button:-right-1 group-hover/button:-top-1 border-laravel"
-              >
-              </div>
-              <div
-                class="absolute border-l border-b h-[30%] aspect-square transition-all -left-px -bottom-px group-hover/button:-left-1 group-hover/button:-bottom-1 border-laravel"
-              >
-              </div>
-              <div
-                class="absolute border-r border-b h-[30%] aspect-square transition-all -right-px -bottom-px group-hover/button:-right-1 group-hover/button:-bottom-1 border-laravel"
-              >
-              </div>
-              Gabung Discord
-            </a>
-          </div>
-        </div>
-        <div class="border-zinc-900 border-b h-4"></div>
-      </div>
-    </div>
-    <div class="absolute z-10 right-0 top-0 bottom-0 w-16 overflow-hidden">
-      <div class="scroll-down md:flex hidden flex-col -space-y-px">
-        {
-          Array.from({ length: 20 }).map(() => (
-            <>
-              <div class="size-16 border border-border-dark shrink-0">
-                <div class="w-full h-1/2 border-b border-border-dark bg-indonesia-red" />
-                <div class="w-full h-1/2 bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/2 h-full border-r border-border-dark bg-indonesia-red" />
-                <div class="w-1/2 h-full bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0">
-                <div class="w-full h-1/2 border-b border-border-dark bg-background" />
-                <div class="w-full h-1/2 bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/2 h-full border-r border-border-dark bg-background" />
-                <div class="w-1/2 h-full bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 grid grid-cols-2 grid-rows-2">
-                <div class="border-r border-b border-border-dark bg-indonesia-red" />
-                <div class=" bg-background" />
-                <div class="bg-background" />
-                <div class="border-l border-t border-border-dark bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 grid grid-cols-2 grid-rows-2">
-                <div class="border-r border-b border-border-dark bg-background" />
-                <div class="bg-indonesia-red" />
-                <div class="bg-indonesia-red" />
-                <div class="border-l border-t border-border-dark bg-background" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex flex-col">
-                <div class="h-1/3 w-full bg-indonesia-red" />
-                <div class="h-1/3 w-full bg-background border-x border-border-dark" />
-                <div class="h-1/3 w-full bg-indonesia-red" />
-              </div>
-              <div class="size-16 border border-border-dark shrink-0 flex">
-                <div class="w-1/3 h-full bg-background" />
-                <div class="w-1/3 h-full bg-indonesia-red border-x border-border-dark" />
-                <div class="w-1/3 h-full bg-background" />
-              </div>
-            </>
-          ))
-        }
-      </div>
-    </div>
-  </main>
+  <HeroSection client:load />
   <section class="border-y flex border-border-dark relative">
     <div class="border-b border-border-dark h-16">
       <svg width="100%" height="100%" aria-hidden="true"
@@ -278,8 +31,8 @@ import IconBrandX from "~icons/tabler/brand-x";
         ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect>
       </svg>
     </div>
-    <div class="inner border-x border-border-dark p-12">
-      <h2 class="text-3xl text-foreground-heading">
+    <div class="inner shrink-0 border-x border-border-dark p-12">
+      <h2 class="sm:text-3xl text-2xl text-foreground-heading">
         Laravel Indonesia menghubungkan para pengembang dari berbagai tingkat
         pengalaman—dari yang baru mengenal <em>framework</em> ini hingga yang telah
         membangun sistem berskala besar. Di sini, diskusi teknis mendalam berpadu
@@ -355,7 +108,7 @@ import IconBrandX from "~icons/tabler/brand-x";
           ><rect width="100%" height="100%" fill="url(#_r12R_6_)"></rect></svg
         >
       </div>
-      <div class="pl-12 pt-12 relative">
+      <div class="md:pl-12 pl-6 md:pt-12 pt-6 relative">
         <div class="flex items-center justify-between">
           <h2
             class="text-xl whitespace-nowrap font-medium border bg-background border-border-dark px-4 py-2"
@@ -366,7 +119,7 @@ import IconBrandX from "~icons/tabler/brand-x";
         </div>
       </div>
       <div
-        class="border-x border-t border-border-dark p-8 flex flex-col relative mx-12 bg-background"
+        class="border-x border-t border-border-dark p-8 flex flex-col relative md:mx-12 mx-6 bg-background"
       >
         <h3 class="text-2xl font-medium text-foreground-heading">
           Saat ini belum ada kegiatan
@@ -432,7 +185,7 @@ import IconBrandX from "~icons/tabler/brand-x";
           ><rect width="100%" height="100%" fill="url(#_r12R_6_)"></rect></svg
         >
       </div>
-      <div class="pl-12 pt-12 relative">
+      <div class="md:pl-12 pl-6 md:pt-12 pt-6 relative">
         <div class="flex items-center justify-between">
           <h2
             class="text-xl whitespace-nowrap font-medium border bg-background border-border-dark px-4 py-2"
@@ -442,9 +195,9 @@ import IconBrandX from "~icons/tabler/brand-x";
           <div class="h-px w-full bg-zinc-800"></div>
         </div>
       </div>
-      <div class="mx-12 flex gap-4">
+      <div class="md:mx-12 mx-6 flex md:flex-row flex-col md:gap-4">
         <div
-          class="border-x w-80 shrink-0 border-t p-6 border-border-dark flex flex-col relative bg-background"
+          class="border-x md:w-80 shrink-0 border-t p-6 border-border-dark flex flex-col relative bg-background"
         >
           Tim di balik layar yang mengalokasikan waktu dan keahlian secara
           sukarela. Atas setiap jam yang dicurahkan untuk menyusun agenda,
@@ -456,7 +209,7 @@ import IconBrandX from "~icons/tabler/brand-x";
         >
           <div class="flex flex-col divide-y divide-border-dark">
             <div
-              class="flex items-center gap-2 last:border-b border-border-dark"
+              class="flex items-center gap-2 md:last:border-b border-border-dark"
             >
               <img
                 class="size-14 border-r border-border-dark"
@@ -487,7 +240,7 @@ import IconBrandX from "~icons/tabler/brand-x";
               </div>
             </div>
             <div
-              class="flex items-center gap-2 last:border-b border-border-dark"
+              class="flex items-center gap-2 md:last:border-b border-border-dark"
             >
               <img
                 class="size-14 border-r border-border-dark"
@@ -548,31 +301,3 @@ import IconBrandX from "~icons/tabler/brand-x";
     </div>
   </div>
 </Layout>
-
-<style>
-  @keyframes scrollUp {
-    0% {
-      transform: translateY(-50%);
-    }
-    100% {
-      transform: translateY(0);
-    }
-  }
-
-  @keyframes scrollDown {
-    0% {
-      transform: translateY(0);
-    }
-    100% {
-      transform: translateY(-50%);
-    }
-  }
-
-  .scroll-up {
-    animation: scrollUp 240s linear infinite;
-  }
-
-  .scroll-down {
-    animation: scrollDown 240s linear infinite;
-  }
-</style>
