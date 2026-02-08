@@ -5,10 +5,16 @@ import IconBrandGithub from "~icons/tabler/brand-github";
 import IconBrandX from "~icons/tabler/brand-x";
 ---
 
+<script>
+  import fitty from "fitty";
+
+  fitty("#laravel-text");
+</script>
+
 <Layout>
   <main class="flex items-center justify-center relative">
     <div class="absolute z-10 left-0 top-0 bottom-0 w-16 overflow-hidden">
-      <div class="scroll-up flex flex-col -space-y-px">
+      <div class="scroll-up flex-col -space-y-px md:flex hidden">
         {
           Array.from({ length: 20 }).map(() => (
             <>
@@ -106,38 +112,23 @@ import IconBrandX from "~icons/tabler/brand-x";
           ><rect width="100%" height="100%" fill="url(#_r9R_g_)"></rect></svg
         >
       </div>
-      <div class="relative flex flex-col -space-y-72 translate-y-2">
-        <span
-          class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
-          style="-webkit-text-stroke:1px var(--color-zinc-500);"
+      <div
+        class="relative flex flex-col xl:-space-y-72 lg:-space-y-66 md:-space-y-48 translate-y-2"
+      >
+        {
+          Array.from({ length: 5 }).map(() => (
+            <span
+              class="font-black xl:text-[12rem] lg:text-[11rem] md:text-[8rem] text-[6rem] select-none leading-[0.8] text-center text-white"
+              style="-webkit-text-stroke:1px var(--color-zinc-500);"
+            >
+              LARAVEL INDONESIA
+            </span>
+          ))
+        }
+        <h1
+          data-laravel-indonesia
+          class="font-black xl:text-[12rem] lg:text-[11rem] md:text-[8rem] text-[6rem] leading-[0.8] text-center"
         >
-          LARAVEL INDONESIA
-        </span>
-        <span
-          class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
-          style="-webkit-text-stroke:1px var(--color-zinc-500);"
-        >
-          LARAVEL INDONESIA
-        </span>
-        <span
-          class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
-          style="-webkit-text-stroke:1px var(--color-zinc-500);"
-        >
-          LARAVEL INDONESIA
-        </span>
-        <span
-          class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
-          style="-webkit-text-stroke:1px var(--color-zinc-500);"
-        >
-          LARAVEL INDONESIA
-        </span>
-        <span
-          class="font-black text-[12rem] select-none leading-[0.8] text-center text-white"
-          style="-webkit-text-stroke:1px var(--color-zinc-500);"
-        >
-          LARAVEL INDONESIA
-        </span>
-        <h1 class="font-black text-[12rem] leading-[0.8] text-center">
           LARAVEL INDONESIA
         </h1>
       </div>
@@ -149,7 +140,9 @@ import IconBrandX from "~icons/tabler/brand-x";
           <div
             class="flex justify-center border-r border-zinc-900 items-center h-16 w-40 shrink-0"
           >
-            <span class="text-lg font-bold text-foreground-heading">50+ Anggota</span>
+            <span class="text-lg font-bold text-foreground-heading">
+              50+ Anggota
+            </span>
           </div>
           <div class="w-full relative h-16 flex items-center">
             <div
@@ -214,7 +207,7 @@ import IconBrandX from "~icons/tabler/brand-x";
       </div>
     </div>
     <div class="absolute z-10 right-0 top-0 bottom-0 w-16 overflow-hidden">
-      <div class="scroll-down flex flex-col -space-y-px">
+      <div class="scroll-down md:flex hidden flex-col -space-y-px">
         {
           Array.from({ length: 20 }).map(() => (
             <>
@@ -375,7 +368,9 @@ import IconBrandX from "~icons/tabler/brand-x";
       <div
         class="border-x border-t border-border-dark p-8 flex flex-col relative mx-12 bg-background"
       >
-        <h3 class="text-2xl font-medium text-foreground-heading">Saat ini belum ada kegiatan</h3>
+        <h3 class="text-2xl font-medium text-foreground-heading">
+          Saat ini belum ada kegiatan
+        </h3>
         <p class="mt-2 mb-6 text-lg text-foreground-body">
           Kami sedang menyiapkan agenda berikutnya. Gabung komunitas untuk
           mendapat update jadwal terbaru.
@@ -460,34 +455,51 @@ import IconBrandX from "~icons/tabler/brand-x";
           class="border-x w-full border-t border-border-dark flex flex-col relative bg-background"
         >
           <div class="flex flex-col divide-y divide-border-dark">
-            <div class="flex items-center gap-2 last:border-b border-border-dark">
+            <div
+              class="flex items-center gap-2 last:border-b border-border-dark"
+            >
               <img
                 class="size-14 border-r border-border-dark"
                 src="https://github.com/dominosaurs.png"
                 alt=""
               />
               <div class="flex flex-col">
-                <span class="text-lg font-semibold text-foreground-heading">Adam Akbar</span>
+                <span class="text-lg font-semibold text-foreground-heading"
+                  >Adam Akbar</span
+                >
                 <span class="text-sm text-foreground-body">Inisiator</span>
               </div>
               <div class="flex gap-2 ml-auto pr-4">
-                <a href="https://github.com/dominosaurs" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://github.com/dominosaurs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconBrandGithub />
                 </a>
-                <a href="https://x.com/dominosaurs" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://x.com/dominosaurs"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconBrandX />
                 </a>
               </div>
             </div>
-            <div class="flex items-center gap-2 last:border-b border-border-dark">
+            <div
+              class="flex items-center gap-2 last:border-b border-border-dark"
+            >
               <img
                 class="size-14 border-r border-border-dark"
                 src="https://github.com/kimmyxpow.png"
                 alt=""
               />
               <div class="flex flex-col">
-                <span class="text-lg font-semibold text-foreground-heading">pow</span>
-                <span class="text-sm text-foreground-body">Insinyur Desain</span>
+                <span class="text-lg font-semibold text-foreground-heading"
+                  >pow</span
+                >
+                <span class="text-sm text-foreground-body">Insinyur Desain</span
+                >
               </div>
               <div class="flex gap-2 ml-auto pr-4">
                 <a
@@ -497,7 +509,11 @@ import IconBrandX from "~icons/tabler/brand-x";
                 >
                   <IconBrandGithub />
                 </a>
-                <a href="https://x.com/kimmyxpow" target="_blank" rel="noopener noreferrer">
+                <a
+                  href="https://x.com/kimmyxpow"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
                   <IconBrandX />
                 </a>
               </div>

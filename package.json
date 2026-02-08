@@ -1,27 +1,20 @@
 {
-  "name": "",
-  "type": "module",
-  "version": "0.0.1",
-  "scripts": {
-    "dev": "astro dev",
-    "build": "astro build",
-    "preview": "astro preview",
-    "astro": "astro"
+  "name": "laravel-indonesia",
+  "private": true,
+  "devDependencies": {
+    "@types/bun": "latest"
+  },
+  "peerDependencies": {
+    "typescript": "^5"
   },
   "dependencies": {
-    "@astrojs/react": "^4.4.2",
-    "@paper-design/shaders-react": "^0.0.71",
-    "@tailwindcss/vite": "^4.1.18",
-    "@types/react": "^19.2.10",
-    "@types/react-dom": "^19.2.3",
-    "astro": "^5.16.11",
-    "fitty": "^2.4.2",
-    "react": "^19.2.4",
-    "react-dom": "^19.2.4",
-    "tailwindcss": "^4.1.18"
-  },
-  "devDependencies": {
+    "@astrojs/svelte": "^7.2.5",
     "@iconify-json/tabler": "^1.2.26",
+    "@tailwindcss/vite": "^4.1.18",
+    "astro": "^5.17.1",
+    "fitty": "^2.4.2",
+    "svelte": "^5.50.0",
+    "tailwindcss": "^4.1.18",
     "unplugin-icons": "^23.0.1"
   }
 }
