@@ -1,9 +1,9 @@
 ---
 import Layout from "~/layouts/app.astro";
 import IconArrowUpRight from "~icons/tabler/arrow-up-right";
-import IconBrandGithub from "~icons/tabler/brand-github";
-import IconBrandX from "~icons/tabler/brand-x";
 import HeroSection from "~/sections/home/hero.astro";
+import honorableMembers from "~/constants/honorable-members";
+import MemberCard from "~/components/member-card.astro";
 ---
 
 <Layout>
@@ -208,69 +208,7 @@ import HeroSection from "~/sections/home/hero.astro";
           class="border-x w-full border-t border-border-dark flex flex-col relative bg-background"
         >
           <div class="flex flex-col divide-y divide-border-dark">
-            <div
-              class="flex items-center gap-2 md:last:border-b border-border-dark"
-            >
-              <img
-                class="size-14 border-r border-border-dark"
-                src="https://github.com/dominosaurs.png"
-                alt=""
-              />
-              <div class="flex flex-col">
-                <span class="text-lg font-semibold text-foreground-heading"
-                  >Adam Akbar</span
-                >
-                <span class="text-sm text-foreground-body">Inisiator</span>
-              </div>
-              <div class="flex gap-2 ml-auto pr-4">
-                <a
-                  href="https://github.com/dominosaurs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconBrandGithub />
-                </a>
-                <a
-                  href="https://x.com/dominosaurs"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconBrandX />
-                </a>
-              </div>
-            </div>
-            <div
-              class="flex items-center gap-2 md:last:border-b border-border-dark"
-            >
-              <img
-                class="size-14 border-r border-border-dark"
-                src="https://github.com/kimmyxpow.png"
-                alt=""
-              />
-              <div class="flex flex-col">
-                <span class="text-lg font-semibold text-foreground-heading"
-                  >pow</span
-                >
-                <span class="text-sm text-foreground-body">Insinyur Desain</span
-                >
-              </div>
-              <div class="flex gap-2 ml-auto pr-4">
-                <a
-                  href="http://github.com/kimmyxpow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconBrandGithub />
-                </a>
-                <a
-                  href="https://x.com/kimmyxpow"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                >
-                  <IconBrandX />
-                </a>
-              </div>
-            </div>
+            {honorableMembers.map((member) => <MemberCard data={member} />)}
           </div>
         </div>
       </div>
