@@ -1,0 +1,20 @@
+[
+  {
+    "name": "dominos",
+    "avatarSrc": "https://github.com/dominosaurs.png",
+    "title": "Inisiator",
+    "links": {
+      "github": "https://github.com/dominosaurs",
+      "x": "https://x.com/dominosaurs_"
+    }
+  },
+  {
+    "name": "pow",
+    "avatarSrc": "https://github.com/kimmyxpow.png",
+    "title": "Insinyur Desain",
+    "links": {
+      "github": "http://github.com/kimmyxpow",
+      "x": "https://x.com/kimmyxpow"
+    }
+  }
+]
